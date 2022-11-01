@@ -3,4 +3,8 @@ from .models import Doctor
 # Register your models here.
 
 
-admin.site.register(Doctor)
+class DoctorAdmin(admin.ModelAdmin):
+	list_display = ['name','middlename','surname','category','rating','price_for_appointment']
+
+
+admin.site.register(Doctor,DoctorAdmin)
