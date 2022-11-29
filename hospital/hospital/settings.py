@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'patients',
     'doctors',
-    'rest_framework'
+    'rest_framework',
+    'corsheaders'
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR),'mediafiles')
 MEDIA_URL  = '/media/'
+
+
+CORS_ORIGIN_ALLOW_ALL = True
